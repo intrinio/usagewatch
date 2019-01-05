@@ -16,7 +16,7 @@ module Usagewatch
   # Show the percentage of disk used.
   def self.uw_diskused_perc
     df = `df --total`
-    df.split(" ").last.to_f.round(2)
+    df.split(" ").last(2).first.to_f.round(2)
   end
 
   # Show the percentage of CPU used
